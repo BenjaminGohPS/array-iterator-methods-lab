@@ -103,11 +103,9 @@ born in the 1500's.
 
 let veryOldInventors = [];
 
-let bornEarly = inventors.filter((inventor) => {
+veryOldInventors = inventors.filter((inventor) => {
   return inventor.year > 1499 && inventor.year < 1600;
 });
-
-veryOldInventors = bornEarly;
 
 // Check your work:
 console.log("Exercise 1 my result: ", veryOldInventors);
@@ -135,11 +133,9 @@ let inventorNames = [];
 
 // Complete the exercise in the space below:
 
-const nameInventors = inventors.map((items) => {
+inventorNames = inventors.map((items) => {
   return { first: items.first, last: items.last };
 });
-
-inventorNames = nameInventors;
 
 // Check your work:
 console.log("Exercise 2 my result: ", inventorNames);
@@ -217,3 +213,106 @@ console.log("Exercise 4 correct result: ", {
   year: 1815,
   passed: 1852,
 });
+
+/*
+Exercise 5: Array.prototype.map()
+
+Use the Array.prototype.map() method to reformat each name in the 'people' 
+array. The goal is to convert names from "Last, First" format to "First Last" 
+format.
+
+Hint: Use the String.prototype.split() method to separate the first and last 
+      names. You can split the string using ', ' as the separator.
+      After splitting the names, rearrange them to the "First Last" format.
+*/
+
+let firstLast = [];
+
+// Complete the exercise in the space below:
+
+// WORKING ON THIS
+// people.map((p) => {
+//   // console.log(p.split(", "));
+//   p.split(", ");
+
+// });
+
+// console.log(people[1]);
+/*
+inventorNames = inventors.map((items) => {
+  return { first: items.first, last: items.last };
+});
+*/
+
+// xx.split(', ')
+// .join
+
+// Check your work:
+console.log("Exercise 5 my result: ", firstLast);
+// console.log("Exercise 5 correct result: ", [
+//   "Carl Becker",
+//   "Samuel Beckett",
+//   "Mick Beddoes",
+//   "Henry Beecher",
+//   "Ludwig Beethoven",
+//   "Menachem Begin",
+//   "Hilaire Belloc",
+//   "Saul Bellow",
+//   "Robert Benchley",
+//   "Peter Benenson",
+//   "David Ben-Gurion",
+//   "Walter Benjamin",
+//   "Tony Benn",
+//   "Chester Bennington",
+//   "Leana Benson",
+//   "Silas Bent",
+//   "Lloyd Bentsen",
+//   "Ric Berger",
+//   "Ingmar Bergman",
+//   "Luciano Berio",
+//   "Milton Berle",
+//   "Irving Berlin",
+//   "Eric Berne",
+//   "Sandra Bernhard",
+//   "Yogi Berra",
+//   "Halle Berry",
+//   "Wendell Berry",
+//   "Erin Bethea",
+//   "Aneurin Bevan",
+//   "Ken Bevel",
+//   "Joseph Biden",
+//   "Ambrose Bierce",
+//   "Steve Biko",
+//   "Josh Billings",
+//   "Frank Biondo",
+//   "Augustine Birrell",
+//   "Elk Black",
+//   "Robert Blair",
+//   "Tony Blair",
+//   "William Blake",
+// ]);
+
+/*
+Exercise 6: Array.prototype.some()
+
+Determine if there is at least one person in the devs array who is 18 years 
+old or older.
+
+- You have an array of people with their respective ages.
+- Use the Array.prototype.some() method to check if any person in the array is 
+  18 years old or older.
+- Store the result (true or false) in the variable 'isAdultPresent'. 
+*/
+
+let isAdultPresent = null;
+
+// Complete the exercise in the space below:
+
+isAdultPresent = devs.some((dev) => {
+  const ageAbove = 2024 - dev.year >= 18;
+  return (dev.year = ageAbove);
+});
+
+// Check your work:
+console.log("Exercise 6 my result: ", isAdultPresent);
+console.log("Exercise 6 correct result: ", true);
