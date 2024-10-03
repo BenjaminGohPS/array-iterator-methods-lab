@@ -109,13 +109,6 @@ let bornEarly = inventors.filter((inventor) => {
 
 veryOldInventors = bornEarly;
 
-//this is good. managed to extract the objects
-
-// this will filter the entries and get the year
-// inventors.map((items) => {
-//   console.log(items.year);
-// });
-
 // Check your work:
 console.log("Exercise 1 my result: ", veryOldInventors);
 console.log("Exercise 1 correct result: ", [
@@ -123,12 +116,44 @@ console.log("Exercise 1 correct result: ", [
   { first: "Johannes", last: "Kepler", year: 1571, passed: 1630 },
 ]);
 
+/*
+Exercise 2: Array.prototype.map()
 
+Map the array of inventors into a new array. This new array should only contain
+objects with the inventors' first and last names.
 
-// Revision on how to call out an object
-const test1 = [
-  { first: "Albert", last: "Einstein", year: 1879, passed: 1955 },
-  { first: "Isaac", last: "Newton", year: 1643, passed: 1727 },
-];
+- For each inventor, return an object in this format: 
+  { first: "First Name", last: "Last Name" }.
+- The new array should be a collection of these objects, each representing an 
+  inventor with only their first and last names.
 
-console.log(test1[1].last);
+Hint: Return a new object literal from the callback that looks like:
+      { first: "First Name", last: "Last Name" }
+*/
+
+let inventorNames = [];
+
+// Complete the exercise in the space below:
+
+const nameInventors = inventors.map((items) => {
+  return { first: items.first, last: items.last };
+});
+
+inventorNames = nameInventors;
+
+// Check your work:
+console.log("Exercise 2 my result: ", inventorNames);
+console.log("Exercise 2 correct result: ", [
+  { first: "Albert", last: "Einstein" },
+  { first: "Isaac", last: "Newton" },
+  { first: "Galileo", last: "Galilei" },
+  { first: "Marie", last: "Curie" },
+  { first: "Johannes", last: "Kepler" },
+  { first: "Nicolaus", last: "Copernicus" },
+  { first: "Max", last: "Planck" },
+  { first: "Katherine", last: "Blodgett" },
+  { first: "Ada", last: "Lovelace" },
+  { first: "Sarah E.", last: "Goode" },
+  { first: "Lise", last: "Meitner" },
+  { first: "Hanna", last: "Hammarström" },
+]);
