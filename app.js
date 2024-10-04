@@ -400,6 +400,14 @@ let totalYearsLived = 0;
 
 // Complete the exercise in the space below:
 
+const allAge = inventors.map((inventor) => {
+  return inventor.passed - inventor.year;
+});
+
+totalYearsLived = allAge.reduce((a, b) => {
+  return a + b;
+});
+
 // Check your work:
 console.log("Level Up 1 my result: ", totalYearsLived);
 console.log("Level Up 1 correct result: ", 861);
