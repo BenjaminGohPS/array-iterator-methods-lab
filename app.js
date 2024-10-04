@@ -230,67 +230,54 @@ let firstLast = [];
 
 // Complete the exercise in the space below:
 
-// WORKING ON THIS
-// people.map((p) => {
-//   // console.log(p.split(", "));
-//   p.split(", ");
-
-// });
-
-// console.log(people[1]);
-/*
-inventorNames = inventors.map((items) => {
-  return { first: items.first, last: items.last };
+firstLast = people.map((p) => {
+  return p.split(", ").reverse().join(" ");
 });
-*/
-
-// xx.split(', ')
-// .join
 
 // Check your work:
 console.log("Exercise 5 my result: ", firstLast);
-// console.log("Exercise 5 correct result: ", [
-//   "Carl Becker",
-//   "Samuel Beckett",
-//   "Mick Beddoes",
-//   "Henry Beecher",
-//   "Ludwig Beethoven",
-//   "Menachem Begin",
-//   "Hilaire Belloc",
-//   "Saul Bellow",
-//   "Robert Benchley",
-//   "Peter Benenson",
-//   "David Ben-Gurion",
-//   "Walter Benjamin",
-//   "Tony Benn",
-//   "Chester Bennington",
-//   "Leana Benson",
-//   "Silas Bent",
-//   "Lloyd Bentsen",
-//   "Ric Berger",
-//   "Ingmar Bergman",
-//   "Luciano Berio",
-//   "Milton Berle",
-//   "Irving Berlin",
-//   "Eric Berne",
-//   "Sandra Bernhard",
-//   "Yogi Berra",
-//   "Halle Berry",
-//   "Wendell Berry",
-//   "Erin Bethea",
-//   "Aneurin Bevan",
-//   "Ken Bevel",
-//   "Joseph Biden",
-//   "Ambrose Bierce",
-//   "Steve Biko",
-//   "Josh Billings",
-//   "Frank Biondo",
-//   "Augustine Birrell",
-//   "Elk Black",
-//   "Robert Blair",
-//   "Tony Blair",
-//   "William Blake",
-// ]);
+console.log("Exercise 5 correct result: ", [
+  "Carl Becker",
+  "Samuel Beckett",
+  "Mick Beddoes",
+  "Henry Beecher",
+  "Ludwig Beethoven",
+  "Menachem Begin",
+  "Hilaire Belloc",
+  "Saul Bellow",
+  "Robert Benchley",
+  "Peter Benenson",
+  "David Ben-Gurion",
+  "Walter Benjamin",
+  "Tony Benn",
+  "Chester Bennington",
+  "Leana Benson",
+  "Silas Bent",
+  "Lloyd Bentsen",
+  "Ric Berger",
+  "Ingmar Bergman",
+  "Luciano Berio",
+  "Milton Berle",
+  "Irving Berlin",
+  "Eric Berne",
+  "Sandra Bernhard",
+  "Yogi Berra",
+  "Halle Berry",
+  "Wendell Berry",
+  "Erin Bethea",
+  "Aneurin Bevan",
+  "Ken Bevel",
+  "Joseph Biden",
+  "Ambrose Bierce",
+  "Steve Biko",
+  "Josh Billings",
+  "Frank Biondo",
+  "Augustine Birrell",
+  "Elk Black",
+  "Robert Blair",
+  "Tony Blair",
+  "William Blake",
+]);
 
 /*
 Exercise 6: Array.prototype.some()
@@ -376,15 +363,43 @@ of comment objects.
 - Store the index in the variable 'idx'.
 */
 
-let idx = null
+let idx = null;
 
 // Complete the exercise in the space below:
 
 idx = comments.findIndex((comment) => {
-  return comment.id === 123523
-})
-
+  return comment.id === 123523;
+});
 
 // Check your work:
-console.log('Exercise 9 my result: ', idx)
-console.log('Exercise 9 correct result: ', 3)
+console.log("Exercise 9 my result: ", idx);
+console.log("Exercise 9 correct result: ", 3);
+
+/*
+Level Up exercise 1: Array.prototype.reduce()
+
+Calculate the combined lifespan of all the inventors using 
+Array.prototype.reduce()
+
+- Each object in the array includes these properties: 
+  'first', 'last', 'year' (birth year), and 'passed' (year of death).
+- Use the Array.prototype.reduce() method to calculate the sum of the total 
+  years lived by all the inventors.
+- Store the total sum in the variable 'totalYearsLived'.
+
+Hints:
+
+- Inside the reduce callback function, calculate the lifespan of each inventor 
+  (passed - year).
+- Accumulate this lifespan in the 'totalYearsLived' variable.
+- Remember, reduce takes a callback function and an initial value for the 
+  accumulator.
+*/
+
+let totalYearsLived = 0;
+
+// Complete the exercise in the space below:
+
+// Check your work:
+console.log("Level Up 1 my result: ", totalYearsLived);
+console.log("Level Up 1 correct result: ", 861);
