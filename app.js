@@ -308,11 +308,15 @@ let isAdultPresent = null;
 
 // Complete the exercise in the space below:
 
+const d = new Date();
+let year = d.getFullYear();
+
 isAdultPresent = devs.some((dev) => {
-  const ageAbove = 2024 - dev.year >= 18;
+  const ageAbove = year - dev.year >= 18;
   return (dev.year = ageAbove);
 });
 
 // Check your work:
 console.log("Exercise 6 my result: ", isAdultPresent);
 console.log("Exercise 6 correct result: ", true);
+
